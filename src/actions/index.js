@@ -10,7 +10,7 @@ export function fetchWeather(city) {
     // we assume all searches are with country code 'us'
     const url = `${ROOT_URL}&q=${city},us`;
 
-    // note, axios.get returns a promise
+    // note, axios.get returns a promise, which the ReduxPromise middleware handles
     const request = axios.get(url);
 
     return {
